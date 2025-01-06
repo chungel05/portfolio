@@ -2,6 +2,7 @@ import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Download } from "lucide-react";
 import Image from "next/image";
+import nextConfig from "../../next.config";
 
 export default function AboutMe() {
     return (
@@ -9,7 +10,7 @@ export default function AboutMe() {
             <div className="flex flex-col items-center justify-between h-[400px] w-full max-w-[400px] px-4 py-4">
                 <div>
                     <Image
-                        src="/IMG_4507_292x292.jpg"
+                        src={`${nextConfig.basePath}/IMG_4507_292x292.jpg`}
                         alt="myself"
                         width={200}
                         height={200}
