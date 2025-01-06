@@ -19,7 +19,18 @@ import Link from "next/link";
 import { SiLinkedin } from "react-icons/si";
 import { Mail } from "lucide-react";
 import { messageSchema } from "@/lib/schema";
-import { InsertMessage } from "./server/(message)/action";
+import { supabase } from "@/lib/initSupabase";
+
+export async function InsertMessage(value: z.infer<typeof messageSchema>) {
+    // Insert data into Supabase
+    const { error } = await supabase.from("message").insert(value);
+
+    if (error) {
+        return { error: error.message };
+    }
+
+    return { success: true };
+}
 
 export default function ContactForm() {
     const { toast } = useToast();
