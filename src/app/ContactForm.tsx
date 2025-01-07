@@ -136,6 +136,7 @@ export default function ContactForm() {
                                 variant="default"
                                 size="icon"
                                 aria-label="Mail"
+                                type="button"
                             >
                                 <Mail className="h-5 w-5" />
                             </Button>
@@ -150,6 +151,7 @@ export default function ContactForm() {
                                 variant="default"
                                 size="icon"
                                 aria-label="Linkedin"
+                                type="button"
                             >
                                 <SiLinkedin className="h-5 w-5" />
                             </Button>
