@@ -1,12 +1,10 @@
-import NRIComponent from "@/components/svg/NRI";
-import Armitage from "@/components/svg/Armitage";
 import { JobExperience } from "@/lib/type";
 
 const experiences: JobExperience[] = [
     {
         jobTitle: "Software Engineer",
         company: "Armitage Technologies Ltd.",
-        icon: <Armitage />,
+        icon: "Armitage",
         timePeriod: "Jun. 2015 - Jun. 2017",
         description: "Developed Scalable Web Solution",
         achievement: [
@@ -21,7 +19,7 @@ const experiences: JobExperience[] = [
     {
         jobTitle: "Software Engineer II",
         company: "Nomura Research Institute",
-        icon: <NRIComponent />,
+        icon: "NRI",
         timePeriod: "Aug. 2017 - Mar. 2020",
         description: "Built Robust ERP System for a multinational corporation",
         achievement: [
@@ -35,7 +33,7 @@ const experiences: JobExperience[] = [
     {
         jobTitle: "Product Manager",
         company: "Nomura Research Institute",
-        icon: <NRIComponent />,
+        icon: "NRI",
         timePeriod: "Apr. 2020 - Feb. 2024",
         description:
             "Defined vision and strategy of ERP products, ensured alignment with business goals",

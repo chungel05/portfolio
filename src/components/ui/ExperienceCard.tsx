@@ -9,12 +9,27 @@ import {
     DialogTrigger,
 } from "@/components/ui/dialog";
 import { JobExperience } from "@/lib/type";
+import ArmitageComponent from "../svg/Armitage";
+import NRIComponent from "../svg/NRI";
+import { CircleHelp } from "lucide-react";
+import React from "react";
 
 interface ExperienceCardProps {
     jobInfo: JobExperience;
 }
 
+const IconComponent: { [key: string]: React.JSX.Element } = {
+    NRI: <NRIComponent className="fill-[#005CAB] h-[35px] w-[68px]" />,
+    Armitage: <ArmitageComponent className="fill-green-500 w-16 h-16" />,
+};
+
 export default function ExperienceCard({ jobInfo }: ExperienceCardProps) {
+    const CompanyIcon = IconComponent[jobInfo.icon] ? (
+        IconComponent[jobInfo.icon]
+    ) : (
+        <CircleHelp className="stroke-red-300 w-16 h-16" />
+    );
+
     return (
         <Dialog>
             <DialogTrigger asChild>
@@ -25,7 +40,7 @@ export default function ExperienceCard({ jobInfo }: ExperienceCardProps) {
                     <div className="flex flex-col items-start justify-center w-full">
                         <div className="flex flex-col items-start md:flex-row md:items-center justify-between w-full py-4 px-4">
                             <div className="flex flex-row items-center justify-center">
-                                <div>{jobInfo.icon}</div>
+                                <div>{CompanyIcon}</div>
                                 <div className="font-bold text-xl text-wrap text-left px-4 py-2">
                                     {jobInfo.jobTitle} at {jobInfo.company}
                                 </div>
@@ -45,7 +60,7 @@ export default function ExperienceCard({ jobInfo }: ExperienceCardProps) {
                     <DialogTitle>
                         <div className="flex flex-col items-start md:flex-row md:items-center justify-between w-full py-4 px-4">
                             <div className="flex flex-row items-center justify-center">
-                                <div>{jobInfo.icon}</div>
+                                <div>{CompanyIcon}</div>
                                 <div className="font-bold text-sm md:text-xl text-wrap text-left px-4 py-2">
                                     {jobInfo.jobTitle}
                                     <br />

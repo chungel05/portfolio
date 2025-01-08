@@ -1,7 +1,7 @@
 export interface JobExperience {
     jobTitle: string;
     company?: string;
-    icon: React.ReactNode;
+    icon: string;
     timePeriod?: string;
     description?: string;
     achievement: string[];
