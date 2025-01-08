@@ -57,7 +57,7 @@ export default function Navbar() {
                                 </Button>
                             </Link>
                             <Link
-                                href="https://drive.google.com/file/d/1_7GLnulLXefAtM97nOVsxdbqU4_8Sv3c/view?usp=sharing"
+                                href="https://drive.google.com/file/d/1a1Pr40CLq23g4mTJdwcUfiPDROAnI47g/view?usp=sharing"
                                 target="_blank"
                                 rel="noopener noreferrer"
                             >
@@ -112,7 +112,7 @@ export default function Navbar() {
                                         </Button>
                                     </Link>
                                     <Link
-                                        href="https://drive.google.com/file/d/1_7GLnulLXefAtM97nOVsxdbqU4_8Sv3c/view?usp=sharing"
+                                        href="https://drive.google.com/file/d/1a1Pr40CLq23g4mTJdwcUfiPDROAnI47g/view?usp=sharing"
                                         target="_blank"
                                         rel="noopener noreferrer"
                                     >
