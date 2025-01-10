@@ -1,3 +1,4 @@
+import React from "react";
 import { Button } from "@/components/ui/button";
 import {
     Dialog,
@@ -9,10 +10,9 @@ import {
     DialogTrigger,
 } from "@/components/ui/dialog";
 import { JobExperience } from "@/lib/type";
+import { CircleHelp } from "lucide-react";
 import ArmitageComponent from "../svg/Armitage";
 import NRIComponent from "../svg/NRI";
-import { CircleHelp } from "lucide-react";
-import React from "react";
 
 interface ExperienceCardProps {
     jobInfo: JobExperience;
@@ -24,11 +24,12 @@ const IconComponent: { [key: string]: React.JSX.Element } = {
 };
 
 export default function ExperienceCard({ jobInfo }: ExperienceCardProps) {
-    const CompanyIcon = IconComponent[jobInfo.icon] ? (
-        IconComponent[jobInfo.icon]
-    ) : (
-        <CircleHelp className="stroke-red-300 w-16 h-16" />
-    );
+    const CompanyIcon =
+        jobInfo.icon && IconComponent[jobInfo.icon] ? (
+            IconComponent[jobInfo.icon]
+        ) : (
+            <CircleHelp className="stroke-red-300 w-16 h-16" />
+        );
 
     return (
         <Dialog>
@@ -42,11 +43,11 @@ export default function ExperienceCard({ jobInfo }: ExperienceCardProps) {
                             <div className="flex flex-row items-center justify-center">
                                 <div>{CompanyIcon}</div>
                                 <div className="font-bold text-xl text-wrap text-left px-4 py-2">
-                                    {jobInfo.jobTitle} at {jobInfo.company}
+                                    {jobInfo.job_title} at {jobInfo.company}
                                 </div>
                             </div>
                             <div className="font-bold text-sm text-right py-2 min-w-[160px]">
-                                {jobInfo.timePeriod}
+                                {jobInfo.time_period}
                             </div>
                         </div>
                         <div className="text-sm text-wrap text-left w-full px-4 py-4">
@@ -62,13 +63,13 @@ export default function ExperienceCard({ jobInfo }: ExperienceCardProps) {
                             <div className="flex flex-row items-center justify-center">
                                 <div>{CompanyIcon}</div>
                                 <div className="font-bold text-sm md:text-xl text-wrap text-left px-4 py-2">
-                                    {jobInfo.jobTitle}
+                                    {jobInfo.job_title}
                                     <br />
                                     at {jobInfo.company}
                                 </div>
                             </div>
                             <div className="font-bold text-xs md:text-sm text-left md:text-right py-2 min-w-[160px]">
-                                {jobInfo.timePeriod}
+                                {jobInfo.time_period}
                             </div>
                         </div>
                     </DialogTitle>
@@ -76,7 +77,7 @@ export default function ExperienceCard({ jobInfo }: ExperienceCardProps) {
                 </DialogHeader>
                 <div className="grid gap-4 py-4">
                     <ul className="list-disc pl-4 space-y-2 text-xs md:text-sm">
-                        {jobInfo.achievement.map(
+                        {jobInfo.achievement?.map(
                             (item: string, idx: number) => {
                                 return <li key={idx}>{item}</li>;
                             }

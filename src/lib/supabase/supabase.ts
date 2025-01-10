@@ -9,6 +9,66 @@ export type Json =
 export type Database = {
     public: {
         Tables: {
+            experience: {
+                Row: {
+                    achievement: string[] | null;
+                    company: string | null;
+                    created_at: string;
+                    description: string | null;
+                    icon: string | null;
+                    id: string;
+                    job_title: string | null;
+                    seq: number;
+                    time_period: string | null;
+                };
+                Insert: {
+                    achievement?: string[] | null;
+                    company?: string | null;
+                    created_at?: string;
+                    description?: string | null;
+                    icon?: string | null;
+                    id?: string;
+                    job_title?: string | null;
+                    seq?: number;
+                    time_period?: string | null;
+                };
+                Update: {
+                    achievement?: string[] | null;
+                    company?: string | null;
+                    created_at?: string;
+                    description?: string | null;
+                    icon?: string | null;
+                    id?: string;
+                    job_title?: string | null;
+                    seq?: number;
+                    time_period?: string | null;
+                };
+                Relationships: [];
+            };
+            file: {
+                Row: {
+                    created_at: string;
+                    ext: string | null;
+                    filename: string | null;
+                    id: string;
+                    url: string | null;
+                };
+                Insert: {
+                    created_at?: string;
+                    ext?: string | null;
+                    filename?: string | null;
+                    id?: string;
+                    url?: string | null;
+                };
+                Update: {
+                    created_at?: string;
+                    ext?: string | null;
+                    filename?: string | null;
+                    id?: string;
+                    url?: string | null;
+                };
+                Relationships: [];
+            };
             message: {
                 Row: {
                     created_at: string;

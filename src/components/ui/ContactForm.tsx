@@ -1,4 +1,5 @@
 "use client";
+import Link from "next/link";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import { useToast } from "@/hooks/use-toast";
@@ -15,22 +16,10 @@ import {
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import Link from "next/link";
 import { SiLinkedin } from "react-icons/si";
 import { Mail } from "lucide-react";
 import { messageSchema } from "@/lib/schema";
-import { supabase } from "@/lib/initSupabase";
-
-export async function InsertMessage(value: z.infer<typeof messageSchema>) {
-    // Insert data into Supabase
-    const { error } = await supabase.from("message").insert(value);
-
-    if (error) {
-        return { error: error.message };
-    }
-
-    return { success: true };
-}
+import { InsertMessage } from "@/lib/supabase/message";
 
 export default function ContactForm() {
     const { toast } = useToast();

@@ -1,6 +1,6 @@
-import ContactForm from "./ContactForm";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
+import ContactForm from "@/components/ui/ContactForm";
 import { SiLinkedin } from "react-icons/si";
 import { Mail } from "lucide-react";
 
