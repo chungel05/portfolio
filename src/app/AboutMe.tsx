@@ -23,8 +23,8 @@ export default function AboutMe() {
                         <span className="font-extrabold">Chung.</span>
                     </p>
                     <p className="text-xl md:text-3xl py-2">
-                        <span className="font-extrabold">Full-Stack </span>
-                        <span className="font-extrabold">Developer</span>
+                        <span className="font-extrabold">Software </span>
+                        <span className="font-extrabold">Engineer</span>
                     </p>
 
                     <Link
@@ -50,16 +50,17 @@ export default function AboutMe() {
                     About <span className="font-extrabold">Me</span>
                 </p>
                 <p className="text-sm text-gray-400 py-4 max-w-[600px]">
-                    Self-motivated software engineer with 9 years experiences.
+                    A highly skilled and self-motivated software engineer with
+                    over <span className="font-bold">8 years</span> of
+                    experience in the IT industry.
                     <br />
-                    Fluent in .Net C#, SQL, TypeScript, CSS and etc. programming
-                    languages.
+                    Proficient in both front-end and back-end development, with
+                    a strong focus on the React library and large-scale API
+                    architecture.
                     <br />
-                    Possessed hands-on project experience working with
-                    stakeholders over 5 years.
-                    <br />
-                    Explored and improved my business understanding with
-                    multinational clients in these few years.
+                    With more than 6 years of hands-on project experience
+                    collaborating with stakeholders, I am committed to
+                    delivering high-quality, user-centric solutions.
                 </p>
             </div>
         </div>

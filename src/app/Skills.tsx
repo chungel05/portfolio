@@ -1,14 +1,14 @@
 import SkillCard from "@/components/ui/SkillCard";
 import { SiGit } from "react-icons/si";
 import { SiDotnet } from "react-icons/si";
-import { SiJavascript } from "react-icons/si";
+import { SiAmazondocumentdb } from "react-icons/si";
 import { SiTypescript } from "react-icons/si";
 import { SiNodedotjs } from "react-icons/si";
 import { SiReact } from "react-icons/si";
-import { SiHtml5 } from "react-icons/si";
-import { SiTailwindcss } from "react-icons/si";
-import { TbSql } from "react-icons/tb";
-import { SiMongodb } from "react-icons/si";
+import { SiDocker } from "react-icons/si";
+import { GrServices } from "react-icons/gr";
+import { TbDatabase } from "react-icons/tb";
+import { SiRabbitmq } from "react-icons/si";
 
 export default function Skills() {
     return (
@@ -31,18 +31,18 @@ export default function Skills() {
                         </SkillCard>
                     </div>
                     <div className="py-4">
-                        <SkillCard label="JavaScript">
-                            <SiJavascript className="h-5 w-5" />
-                        </SkillCard>
-                    </div>
-                    <div className="py-4">
                         <SkillCard label="TypeScript">
                             <SiTypescript className="h-5 w-5" />
                         </SkillCard>
                     </div>
                     <div className="py-4">
-                        <SkillCard label="Node.JS">
-                            <SiNodedotjs className="h-5 w-5" />
+                        <SkillCard label="SQL">
+                            <TbDatabase className="h-5 w-5" />
+                        </SkillCard>
+                    </div>
+                    <div className="py-4">
+                        <SkillCard label="NoSQL">
+                            <SiAmazondocumentdb className="h-5 w-5" />
                         </SkillCard>
                     </div>
                     <div className="py-4">
@@ -51,23 +51,23 @@ export default function Skills() {
                         </SkillCard>
                     </div>
                     <div className="py-4">
-                        <SkillCard label="HTML">
-                            <SiHtml5 className="h-5 w-5" />
+                        <SkillCard label="Node.JS">
+                            <SiNodedotjs className="h-5 w-5" />
                         </SkillCard>
                     </div>
                     <div className="py-4">
-                        <SkillCard label="Tailwind">
-                            <SiTailwindcss className="h-5 w-5" />
+                        <SkillCard label="Microservice">
+                            <GrServices className="h-5 w-5" />
                         </SkillCard>
                     </div>
                     <div className="py-4">
-                        <SkillCard label="SQL">
-                            <TbSql className="h-5 w-5" />
+                        <SkillCard label="RabbitMQ">
+                            <SiRabbitmq className="h-5 w-5" />
                         </SkillCard>
                     </div>
                     <div className="py-4">
-                        <SkillCard label="MongoDB">
-                            <SiMongodb className="h-5 w-5" />
+                        <SkillCard label="Docker">
+                            <SiDocker className="h-5 w-5" />
                         </SkillCard>
                     </div>
                 </div>
